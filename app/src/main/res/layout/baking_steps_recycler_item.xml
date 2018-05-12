@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="0dp">
+
+    <RelativeLayout
+        android:id="@+id/baking_steps_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/list_selector">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/v_step_connector_top"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/content_description_step_icon"
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/ic_circle_black_24dp" />
+
+            <View
+                android:id="@+id/v_step_connector_bottom"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/baking_steps_shortDes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="25dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            tools:text="Recipe Introduction"/>
+
+        <ImageView
+            android:id="@+id/baking_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@id/baking_steps_shortDes"
+            android:layout_toRightOf="@id/baking_steps_shortDes"
+            android:layout_toLeftOf="@id/baking_arrow"
+            android:layout_toStartOf="@id/baking_arrow"
+            android:scaleType="centerCrop"/>
+
+</RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.baking.divyamjoshi.bake">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Baking.InstructionsActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Baking.DirectionsActivity"
+            android:configChanges="orientation"
+            android:parentActivityName=".Baking.InstructionsActivity"/>
+
+        <provider
+            android:name=".Data.generated.RecipeProvider"
+            android:authorities="com.baking.divyamjoshi.bake.Data.RecipeProvider"
+            android:exported="false" />
+
+        <receiver android:name=".Widget.FavoriteRecipeWidgetProvider"
+            android:enabled="@bool/widget_detail_enabled">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.baking.divyamjoshi.bake.ACTION_DATA_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/favorite_recipe_widget_info" />
+        </receiver>
+        <service android:name=".Widget.WidgetRemoteViewsService"
+            android:enabled="@bool/widget_detail_enabled"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+    </application>
+
+</manifest>

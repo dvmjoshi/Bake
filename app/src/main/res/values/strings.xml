@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name"> Baker</string>
+    <string name="servings">Servings: %1$d</string>
+    <string name="ingredient_amount">%1$s %2$s</string>
+    <string name="step">%1$d. %2$s</string>
+    <string name="content_description_step_icon">Step Icon</string>
+        <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="instructions">Instructions</string>
+    <string name="ingredientsList_key">ingredientsList</string>
+    <string name="stepsList_Key">stepsList</string>
+    <string name="recipeName_key">recipeName</string>
+    <string name="stepPosition">stepPosition</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="position">position</string>
+    <string name="recipeName">recipeName</string>
+    <string name="recipeId">recipeId</string>
+    <string name="servingSize">servingSize</string>
+    <string name="iList">ingredientsList</string>
+    <string name="sList">stepsList</string>
+    <string name="no_recipe_favorites">No favorites recipe</string>
+    <string name="recipe_empty_view">No Internet Connection.</string>
+    <string name="retry">RETRY</string>
+</resources>

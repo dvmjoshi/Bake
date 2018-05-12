@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baking.divyamjoshi.bake.Baking.DirectionsActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/navi_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="@dimen/barElevation"
+        android:background="@color/naviArrowBackground"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/next_step"
+            android:layout_width="@dimen/naviArrowWidth"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+            android:background="@color/naviArrowBackground"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/step_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:textSize="@dimen/naviTextSize"
+            android:textColor="@color/mainTextColor"
+            tools:text="2"/>
+
+        <ImageButton
+            android:id="@+id/prev_step"
+            android:layout_width="@dimen/naviArrowWidth"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+            android:background="@color/naviArrowBackground"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/direction_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/navi_bar"/>
+
+</RelativeLayout>

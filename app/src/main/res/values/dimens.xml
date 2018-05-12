@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="widget_margin">8dp</dimen>
+    <dimen name="toggle_button">36dp</dimen>
+    <dimen name="toolbarTextSize">40sp</dimen>
+    <dimen name="mainAppbarHeight">112dp</dimen>
+    <dimen name="barElevation">4dp</dimen>
+
+    <!-- Navigation bar -->
+    <dimen name="naviArrowWidth">100dp</dimen>
+    <dimen name="naviTextSize">20sp</dimen>
+
+</resources>
